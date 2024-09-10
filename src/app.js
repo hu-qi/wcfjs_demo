@@ -21,7 +21,11 @@ const filePath = subDir ? join(basePath, subDir, 'index.js') : join(basePath, 'i
 
 // 执行对应目录下的代码
 try {
-  execSync(`node ${filePath}`, { stdio: 'inherit' });
+  if(framework.toLowerCase() === 'nuxt') {
+    execSync(`cd src/Nuxt && npm run dev -o`, { stdio: 'inherit' });
+  } else {
+    execSync(`node ${filePath}`, { stdio: 'inherit' });
+  }
 } catch (error) {
   console.error('Error executing the script:', error);
   process.exit(1);
