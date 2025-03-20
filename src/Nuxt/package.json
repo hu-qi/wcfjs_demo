@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@wechatferry/nuxt": "^0.0.17",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.16.0",
     "vue": "latest",
     "vue-router": "latest"
   }
